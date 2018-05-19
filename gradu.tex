@@ -1,88 +1,10 @@
-\nonstopmode
-\batchmode %jos et halua nähdä, kommentoi pois! t
 \documentclass[12pt,a4paper]{article}
-\usepackage{verbatim}
-\usepackage[head=0.98in,foot=0.98in]{geometry}
+
+
+
+\usepackage{gradutyyli}
 
 \title{Pro Gradu -tutkielma}
-
-\usepackage[T2A]{fontenc}
-\usepackage[utf8]{inputenc}
-\usepackage[russian,greek,english,finnish]{babel}
-
-\usepackage{indentfirst}
-\usepackage{color}
-\usepackage[nottoc,numbib]{tocbibind}
-
-\usepackage{fancyhdr}
-\pagestyle{myheadings}
-\usepackage{setspace}
-
-%\usepackage{nanbib}
-%\bibpunct{(}{)}{;}{a}{,}{,}
-
-\usepackage[autostyle=true, style=russian]{csquotes}
-%saadaan venäläiset aakkoset listoihin
-\usepackage{enumitem}
-\makeatletter
-\AddEnumerateCounter{\asbuk}{\russian@alph}{щ}
-\makeatother
-
-\usepackage[backend=biber,
-        citestyle=authoryear-ibid,
-        bibstyle=authortitle,
-        sorting=nyt,
-        dashed=false,
-        maxnames=2,
-        minnames=1,
-        language=auto,%autobib laittaa et.al merkinnät kaikki venäjäksi
-        autolang=other*,
-        isbn=false,
-        url=false,
-        doi=false,
-        %pagetracker=true,
-        %citecounter=true,
-        %citetracker=true,
-        %ibidtracker=true,
-        autocite=inline
-        ]
-{biblatex}
-
-\addbibresource{viitteet.bib}
-
-\setlength{\parindent}{4ex}
-\setlength{\parskip}{0ex}% Kappaleiden välin asetus
-
-\expandafter\def\expandafter\quote\expandafter{\quote\small\singlespacing}
-\linespread{1.5}
-
-
-
-\addto\captionsrussian{% Replace "english" with the language you use
-  \renewcommand{\contentsname}%
-    {Оглавление}%
-}
-
-\addto\captionsrussian{% Replace "english" with the language you use
-  \renewcommand{\bibname}
-    {Список использованной литературы}
-}
-
-\addto\captionsrussian{% Replace "english" with the language you use
-  \renewcommand{\refname}
-    {Список использованной литературы}
-}
-
-
-
-
-\setlength{\voffset}{-0.02in}
-\setlength{\hoffset}{0.57in}
-\setlength{\marginparsep}{0pt}
-
-% \usepackage{graphicx}
-% tai \usepackage{graphics}
-% kuvatiedostojen liittämiseksi
 
 \begin{document}
 
@@ -122,7 +44,6 @@
 	\end{flushright}
 \end{titlepage}
 
-%Valitaan tämän osuuden kieli
 \selectlanguage{russian}
 
 \tableofcontents
@@ -130,19 +51,11 @@
 
 \pagebreak
 
-%%% Oma teksti tämän jälkeen.
-%%% Tyhjä rivi kappalten väliin.§] omiin tarkoituksiinsa.
+\section{Введение}
 
 %artikkeli, runo lainausmerkit
 %erilliset teokset kursiivilla
 
-
-\section{Введение}
-% * <ida.reini@gmail.com> 2018-04-09T09:37:14.492Z:
-%
-% tuli tuossa krisun työtä lukiessa mieleen, että olisi kiva nähdä ihmisten tutkimuskysymys vielä uudestaan, niin osaisi sanoa onko teksti relevanttia vai ei. eli jos on aikaa niin mun mieliksi voi lisätä vvedenien
-%
-% ^.
 
 % Данная работа посвящена изучению отношений между романа Федора Сологуба <<Мелкий бес>> и сологубской теории искусства, которой он развивается в разных статьях, например,  <<Не постыдно ли быть декадентом>> (1896), <<Демоны поэтов>> (1907) <<Театр одной воли>> (1908) и <<Искусство наших дней>> (1915). Особое внимание уделяется сологубским мифом о Дульцинее и Альфонсе, который основан на романе <<Дон Кихот>>. В этом мифе Сологуб соединяет быт с искусством, грех со святостью и декадентство с символизмом. Многие исследователи уже заметили параллели  романа Сологуба с <<Дон Кихотом>>, а в данной работе изучаем подробно как эта тематика влияет на повествовании романа.
 
@@ -450,6 +363,11 @@
 % \enquote{В повестях и романах все глупости пишут.} \parencite[54]{sologub2004}
 
 % Tämä on liian tiivistä...
+
+Tässä kappaleessa tarkastelemme romaanin kertojan ironista asennetta ja suhtaumista. Fjodor Sologubin kirjallisuutta käsittelevissä kirjoituksissa hän itse näki että kirjallisuudessa on kaksi moodia: ironinen ja lyyrinen. Meidän mielestämme tässä romaanissa nimenomaan ironisen kertojan käyttö on Sologubilla tärkeä keino, joka liittyy erityisesti neomytologiseen romaaniin ja siihen maailmankuvaan, joka Sologubilla on. Schmidin mukaan ironinen sävy kerronnassa saadaan aikaan nimen omaan fokalisaation avulla.
+
+Etsi jotain sanottavaa ironiasta. Muuten tämä johdanto on ihan turha
+
 Теперь собираемся показать, как повествователь романа относится иронически к персонажам и обратим внимание на противопоставление
 %Соотношение
 между ироническом повествователем и персонажами, фокализирующими повествователем. В повествовании, ирония связана с фокализацией. Согласно Шмиду, \enquote{ирония основывается не просто на внешней точке зрения, а на одновременности двух оценочных позиций, на симультанной \enquote{внутринаходимости} и \enquote{вненаходимости}, пользуясь понятиями Бахтина} \parencite[118]{schmid2008}.  Хотя иронический повествователь не был необычным приемом уже во время романтизма и появляется нередко также у Достоевского, у Сологуба ирония является очень важным приемом, который тесно связано с его мировоззрением и теорией искусства.

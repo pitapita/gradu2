@@ -1,0 +1,88 @@
+\ProvidesPackage{gradutyyli}
+
+
+
+\usepackage{verbatim}
+\usepackage[head=0.98in,foot=0.98in]{geometry}
+
+
+
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[russian,greek,english,finnish]{babel}
+
+\usepackage{indentfirst}
+\usepackage{color}
+\usepackage[nottoc,numbib]{tocbibind}
+
+\usepackage{fancyhdr}
+\pagestyle{myheadings}
+\usepackage{setspace}
+
+\usepackage[backend=biber,
+        citestyle=authoryear-ibid,
+        bibstyle=authortitle,
+        sorting=nyt,
+        dashed=false,
+        maxnames=2,
+        minnames=1,
+        language=auto,%autobib laittaa et.al merkinnät kaikki venäjäksi
+        autolang=other*,
+        isbn=false,
+        url=false,
+        doi=false,
+        %pagetracker=true,
+        %citecounter=true,
+        %citetracker=true,
+        %ibidtracker=true,
+        autocite=inline
+        ]
+{biblatex}
+
+\addbibresource{viitteet.bib}
+
+%\usepackage{nanbib}
+%\bibpunct{(}{)}{;}{a}{,}{,}
+
+\usepackage[autostyle=true, style=russian]{csquotes}
+%saadaan venäläiset aakkoset listoihin
+\usepackage{enumitem}
+\makeatletter
+\AddEnumerateCounter{\asbuk}{\russian@alph}{щ}
+\makeatother
+
+
+
+\setlength{\parindent}{4ex}
+\setlength{\parskip}{0ex}% Kappaleiden välin asetus
+
+\expandafter\def\expandafter\quote\expandafter{\quote\small\singlespacing}
+\linespread{1.5}
+
+
+
+\addto\captionsrussian{% Replace "english" with the language you use
+  \renewcommand{\contentsname}%
+    {Оглавление}%
+}
+
+\addto\captionsrussian{% Replace "english" with the language you use
+  \renewcommand{\bibname}
+    {Список использованной литературы}
+}
+
+\addto\captionsrussian{% Replace "english" with the language you use
+  \renewcommand{\refname}
+    {Список использованной литературы}
+}
+
+
+
+
+\setlength{\voffset}{-0.02in}
+\setlength{\hoffset}{0.57in}
+\setlength{\marginparsep}{0pt}
+
+% \usepackage{graphicx}
+% tai \usepackage{graphics}
+% kuvatiedostojen liittämiseksi
